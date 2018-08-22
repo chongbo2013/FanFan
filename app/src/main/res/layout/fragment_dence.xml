@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/ptr_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="暂无本地舞蹈"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

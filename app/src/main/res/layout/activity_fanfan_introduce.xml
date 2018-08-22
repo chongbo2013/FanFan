@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.setting.act.dance.DanceAddActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/fanfan_introduce_bar"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_fanfan_introduce"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/introduce_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:divider="@color/black">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y15"
+            android:layout_marginTop="@dimen/y15"
+            android:gravity="center"
+            android:text="海风智能-FANFAN服务机器人"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x15" />
+
+
+        <ImageView
+            android:id="@+id/iv_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/iv_logo"
+            android:layout_below="@+id/tv_title" />
+
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/y15"
+            android:src="@mipmap/ic_flat_logo" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

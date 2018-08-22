@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.main.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_public"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/y50"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/public_number" />
+
+    <ImageView
+        android:id="@+id/iv_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/iv_public"
+        android:background="@mipmap/introduce_navigation" />
+
+    <ImageView
+        android:id="@+id/iv_seting_up"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/y50"
+        android:layout_above="@+id/iv_public"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/seting_up" />
+
+    <ImageView
+        android:id="@+id/iv_face"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:layout_above="@+id/iv_public"
+        android:layout_toLeftOf="@+id/iv_seting_up"
+        android:background="@mipmap/face_recognition" />
+
+    <ImageView
+        android:id="@+id/iv_multi_media"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y150"
+        android:layout_above="@+id/iv_face"
+        android:background="@mipmap/multi_media" />
+
+
+    <ImageView
+        android:id="@+id/iv_problem"
+        android:layout_width="@dimen/x130"
+        android:layout_height="@dimen/y90"
+        android:layout_above="@+id/iv_multi_media"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/problem_consulting" />
+
+
+    <ImageView
+        android:id="@+id/iv_fanfan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_multi_media"
+        android:layout_toLeftOf="@+id/iv_problem"
+        android:background="@mipmap/fanfan_hand" />
+
+
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_problem"
+        android:layout_toRightOf="@+id/iv_fanfan"
+        android:background="@mipmap/video_introduction" />
+
+
+    <com.fanfan.robot.view.ChatTextView
+        android:id="@+id/chat_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x120"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/y50"
+        android:background="@drawable/chatfrom_bg_focused"
+        android:maxWidth="500dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x8"
+        android:visibility="gone" />
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:alpha="255" />
+
+    <com.baidu.aip.face.TexturePreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+    <TextureView
+        android:id="@+id/texture_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+
+</RelativeLayout>

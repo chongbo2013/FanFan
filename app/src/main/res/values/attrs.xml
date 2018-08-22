@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- camera -->
+    <attr name="iconSize" format="dimension" />
+    <attr name="iconMargin" format="dimension" />
+    <attr name="iconSrc" format="reference" />
+    <attr name="iconLeft" format="reference" />
+    <attr name="iconRight" format="reference" />
+    <attr name="duration_max" format="integer" />
+    <declare-styleable name="CameraView">
+        <attr name="iconSize" />
+        <attr name="iconMargin" />
+        <attr name="iconSrc" />
+        <attr name="iconLeft" />
+        <attr name="iconRight" />
+        <attr name="duration_max" />
+    </declare-styleable>
+
+    <!-- large image -->
+    <declare-styleable name="SubsamplingScaleImageView">
+        <attr name="src" format="reference" />
+        <attr name="assetName" format="string" />
+        <attr name="panEnabled" format="boolean" />
+        <attr name="zoomEnabled" format="boolean" />
+        <attr name="quickScaleEnabled" format="boolean" />
+        <attr name="tileBackgroundColor" format="color" />
+    </declare-styleable>
+
+    <!-- openvc -->
+    <declare-styleable name="CameraBridgeViewBase">
+        <attr name="show_fps" format="boolean" />
+        <attr name="camera_id" format="integer">
+            <enum name="any" value="-1" />
+            <enum name="back" value="99" />
+            <enum name="front" value="98" />
+        </attr>
+    </declare-styleable>
+
+    <!-- call view -->
+    <declare-styleable name="GlowPadView">
+        <attr name="android:gravity" />
+
+        <!-- Reference to an array resource that be shown as targets around a circle. -->
+        <attr name="targetDrawables" format="reference" />
+
+        <!-- Reference to an array resource that be used as description for the targets around the circle. -->
+        <attr name="targetDescriptions" format="reference" />
+
+        <!-- Reference to an array resource that be used to announce the directions with targets around the circle. -->
+        <attr name="directionDescriptions" format="reference" />
+
+        <!-- Sets a drawable as the center. -->
+        <attr name="handleDrawable" format="reference" />
+
+        <!-- Drawable to use for wave ripple animation. -->
+        <attr name="outerRingDrawable" format="reference" />
+
+        <!-- Drawble used for drawing points -->
+        <attr name="pointDrawable" format="reference" />
+
+        <!-- Inner radius of glow area. -->
+        <attr name="innerRadius" format="dimension" />
+
+        <!-- Outer radius of glow area. Target icons will be drawn on this circle. -->
+        <attr name="outerRadius" format="dimension" />
+
+        <!-- Size of target radius. Points within this distance of target center is a "hit". -->
+        <!--
+        <attr name="hitRadius" format="dimension"/>
+        -->
+
+        <!-- Radius of glow under finger. -->
+        <attr name="glowRadius" format="dimension" />
+
+        <!-- Tactile feedback duration for actions. Set to '0' for no vibration. -->
+        <attr name="vibrationDuration" format="integer" />
+
+        <!-- How close we need to be before snapping to a target. -->
+        <attr name="snapMargin" format="dimension" />
+
+        <!-- Number of waves/chevrons to show in animation. -->
+        <attr name="feedbackCount" format="integer" />
+
+        <!-- Used when the handle shouldn't wait to be hit before following the finger -->
+        <attr name="alwaysTrackFinger" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AnalogClock">
+        <attr name="jewelRadius" format="dimension" />
+        <attr name="jewelOffset" format="dimension" />
+        <attr name="jewelColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.face.FaceRecognitionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/face_recognition_bar"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_face_recognition"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/face_face_check_in" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/face_instagram" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/face_witness_contrast" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/face_face_extraction" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_center"
+            android:layout_width="@dimen/y300"
+            android:layout_height="@dimen/y300"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/face_background" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:paddingLeft="@dimen/y10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_face_check_in"
+                        android:layout_width="@dimen/y110"
+                        android:layout_height="@dimen/y110"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/face_face_check_in" />
+
+                    <ImageView
+                        android:id="@+id/face_check_in_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/y30"
+                        android:src="@mipmap/face_check_in_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/face_check_in_line"
+                        android:text="@string/title_face_check_in"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:paddingRight="@dimen/y10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_face_instagram"
+                        android:layout_width="@dimen/y110"
+                        android:layout_height="@dimen/y110"
+                        android:layout_alignParentBottom="true"
+                        android:src="@mipmap/face_instagram" />
+
+                    <ImageView
+                        android:id="@+id/instagram_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/y30"
+                        android:src="@mipmap/face_instagram_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/instagram_line"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/title_instagram_photo"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/y10"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_face_witness_contrast"
+                        android:layout_width="@dimen/y110"
+                        android:layout_height="@dimen/y110"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/face_witness_contrast" />
+
+                    <ImageView
+                        android:id="@+id/face_witness_contrast_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/y30"
+                        android:src="@mipmap/face_witness_contrast_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/face_witness_contrast_line"
+                        android:text="@string/title_face_witness_contrast"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/y10"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_face_extraction"
+                        android:layout_width="@dimen/y110"
+                        android:layout_height="@dimen/y110"
+                        android:src="@mipmap/face_face_extraction" />
+
+                    <ImageView
+                        android:id="@+id/face_extraction_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/y30"
+                        android:src="@mipmap/face_extraction_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/face_extraction_line"
+                        android:layout_alignRight="@+id/face_extraction_line"
+                        android:layout_below="@+id/face_extraction_line"
+                        android:text="@string/title_face_extraction"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

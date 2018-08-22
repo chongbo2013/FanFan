@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.face.act.FaceCheckinActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/camera_bottom">
+
+        <SurfaceView
+            android:id="@+id/camera_surfaceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <com.fanfan.robot.view.camera.DetectionFaceView
+            android:id="@+id/detection_face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.fanfan.robot.view.camera.DetectOpenFaceView
+            android:id="@+id/opencv_face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/camera_toolbar"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_face_check_in"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/layout_check_in"/>
+
+    <include layout="@layout/layout_beauty" />
+
+    <RelativeLayout
+        android:id="@+id/camera_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_alignParentBottom="true"
+        android:background="@color/camera_toolbar">
+
+        <TextView
+            android:id="@+id/tv_sign_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:background="@color/sign_info"
+            android:gravity="center"
+            android:text="正对摄像头，保持微笑"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x12" />
+
+        <TextView
+            android:id="@+id/tv_sign_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_sign_info"
+            android:background="@color/sign_all"
+            android:gravity="center"
+            android:text="查看全部签到"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x12" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="splashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/background</item>
+    </style>
+
+    <style name="AppThemeAction" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar.MyStyle" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <!--<item name="android:background">?attr/colorPrimary</item>-->
+        <item name="android:minHeight">?attr/actionBarSize</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="mainTextViewStyle">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/x8</item>
+    </style>
+
+
+    <style name="jc_style_dialog_progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/jc_popup_toast_anim</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="jc_popup_toast_anim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="jc_vertical_progressBar">
+        <item name="android:maxWidth">12dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/jc_volume_progress_bg</item>
+        <item name="android:indeterminateDuration">3500</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:minWidth">1dp</item>
+    </style>
+
+
+    <style name="redButton">
+        <item name="android:background">@drawable/bg_btn_style_red</item>
+        <item name="android:textColor">@color/white_color_selector</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="buleButton">
+        <item name="android:background">@drawable/bg_btn_style_bule</item>
+        <item name="android:textColor">@color/white_color_selector</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="confirm_tv_style">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/x8</item>
+    </style>
+
+    <style name="MVP_AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/MVP_DrawerArrowStyle</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="19">true</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+
+        <!-- Toolbar Theme / Apply white arrow -->
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="actionBarTheme">@style/MVP_AppTheme.ActionBarTheme</item>
+
+        <!-- Material Theme -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/accent_color</item>
+
+        <item name="android:statusBarColor" tools:targetApi="21">@color/statusBarColor</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/navigationBarColor
+        </item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="21">true</item>
+
+    </style>
+
+    <style name="MVP_AppTheme.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- White arrow -->
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="MVP_DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/drawerArrowColor</item>
+    </style>
+
+    <style name="dialogSlideAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_slide_out</item>
+    </style>
+
+    <style name="PopupWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+    </style>
+
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <!--<item name="android:colorBackground">#000000</item> 也可以设置背景色以及menu中的其他属性-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>  <!--设置不覆盖锚点-->
+    </style>
+
+    <style name="base_listview_style" parent="@android:style/Widget.ListView">
+        <item name="android:scrollbarThumbVertical">@drawable/base_list_scrollbar_handle</item>
+        <item name="android:fadingEdgeLength">0.0dip</item>
+        <item name="android:alwaysDrawnWithCache">true</item>
+        <item name="android:listSelector">@drawable/base_list_selector</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0.0dip</item>
+    </style>
+
+    <style name="base_large_progressbar_style">
+        <item name="android:maxWidth">38dp</item>
+        <item name="android:maxHeight">38dp</item>
+        <item name="android:indeterminateDrawable">@anim/base_loading_large_anim</item>
+        <item name="android:minWidth">38dp</item>
+        <item name="android:minHeight">38dp</item>
+    </style>
+
+    <style name="CustomTheme_Dialog" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/notAnimation</item>
+    </style>
+
+    <style name="notAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+</resources>

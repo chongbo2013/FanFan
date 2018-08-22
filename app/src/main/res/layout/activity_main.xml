@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.main.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_fanfan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:background="@mipmap/fanfan_hand"
+        app:layout_constraintBottom_toTopOf="@+id/line_5"
+        app:layout_constraintEnd_toStartOf="@+id/line_0"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
+        android:background="@mipmap/video_introduction"
+        android:cropToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/line_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/line_0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_problem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/problem_consulting"
+        app:layout_constraintBottom_toTopOf="@+id/iv_multi_media"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/line_0"
+        app:layout_constraintTop_toBottomOf="@+id/iv_video" />
+
+    <ImageView
+        android:id="@+id/iv_multi_media"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/multi_media"
+        app:layout_constraintBottom_toTopOf="@+id/line_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line_5" />
+
+    <ImageView
+        android:id="@+id/iv_face"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/face_recognition"
+        app:layout_constraintBottom_toTopOf="@+id/line_4"
+        app:layout_constraintEnd_toStartOf="@+id/line_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line_3" />
+
+    <ImageView
+        android:id="@+id/iv_seting_up"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/seting_up"
+        app:layout_constraintBottom_toTopOf="@+id/line_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/line_1"
+        app:layout_constraintTop_toTopOf="@+id/line_3" />
+
+
+    <ImageView
+        android:id="@+id/iv_public"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/public_number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/line_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line_4" />
+
+    <ImageView
+        android:id="@+id/iv_navigation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/introduce_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/line_2"
+        app:layout_constraintTop_toTopOf="@+id/line_4" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.fanfan.robot.view.ChatTextView
+        android:id="@+id/chat_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chatfrom_bg_focused"
+        android:maxWidth="200dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x8"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/line_5"
+        app:layout_constraintStart_toStartOf="@+id/line_2"
+        app:layout_constraintTop_toTopOf="@+id/iv_fanfan"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+</android.support.constraint.ConstraintLayout>

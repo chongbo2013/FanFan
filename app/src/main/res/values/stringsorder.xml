@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    public static final String[] action = {"双臂向左欢迎", "双臂向右欢迎", "单左手优雅解释", "单右手优雅解释",
+    "W型手势", "小动作", "运动左手在前", "运动右手在前", "连续运动", "双手奏乐", "可爱-摆臂",
+    "右手握手", "打招呼手臂摇摆（动作大）", "拥抱", "阅读", "生气掐腰", "小动作_考虑", "单手演奏", "啊！白云_右（动作大）",
+    "太极（小动作）", "左手捶胸保证", "右手捶胸保证", "啊！白云_左（动作大）","蛇行手臂（舞蹈动作）","双手打招呼",
+    "向左欢迎+优雅解释左+Why手势", "向右欢迎+优雅解释右+小动作", "运动右+运动左+连续运动", "双手奏乐+可爱","握手+优雅解释右",
+    "打招呼+握手+拥抱", "看书+小动作考虑+优雅解释右", "拥抱+起飞+掐腰", "优雅解释左+考虑一下+优雅解释右",
+    "单手奏乐+看书+啊！白云", "太极+啊白云", "保证左+优雅打招呼右", "保证右+优雅打招呼左",
+    "开始跳舞", "停止跳舞"};
+    public static final String[] action_order = {"A50C8001AA", "A50C8002AA",
+    "A50C8003AA","A50C8004AA",
+    "A50C8005AA", "A50C8006AA", "A50C8007AA", "A50C8008AA", "A50C8009AA", "A50C800AAA",
+    "A50C800BAA",
+    "A50C800CAA", "A50C800DAA", "A50C800EAA", "A50C800FAA", "A50C8010AA", "A50C8011AA",
+    "A50C8012AA","A50C8013AA",
+    "A50C8014AA", "A50C8015AA", "A50C8016AA", "A50C8017AA", "A50C8018AA", "A50C8019AA",
+    "A50C8021AA", "A50C8022AA","A50C8023AA", "A50C8024AA", "A50C8025AA",
+    "A50C8026AA", "A50C8027AA", "A50C8028AA", "A50C8029AA",
+    "A50C802AAA", "A50C802BAA", "A50C802CAA", "A50C802DAA",
+    "A50C80E1AA", "A50C80E2AA"};
+
+    public static final String[] expression = {"微笑", "萌", "下看", "右看", "左看", "滑稽", "大哭", "心", "疑惑",
+    "委屈", "呆"};
+    public static final String[] expression_data = {"A5028001AA", "A5028002AA", "A5028003AA",
+    "A5028004AA", "A5028005AA", "A5028006AA",
+    "A5028007AA", "A5028008AA", "A5028009AA", "A502800AAA", "A502800BAA"};
+
+    public static final String[] navigation = {"去first", "去second", "去third", "去forth", "去fifth",
+    "去sixth"};
+    public static final String[] navigation_data = {"first", "second", "third", "forth", "fifth",
+    "sixth"};
+
+    public static final String[] dataType = {"本地语音", "本地导航"};
+
+
+    <string-array name="action">
+        <item>双臂向左欢迎</item>
+        <item>双臂向右欢迎</item>
+        <item>单左手优雅解释</item>
+        <item>单右手优雅解释</item>
+        <item>W型手势</item>
+        <item>小动作</item>
+        <item>运动左手在前</item>
+        <item>运动右手在前</item>
+        <item>连续运动</item>
+        <item>双手奏乐</item>
+        <item>可爱-摆臂</item>
+        <item>右手握手</item>
+        <item>打招呼手臂摇摆（动作大）</item>
+        <item>拥抱</item>
+        <item>阅读</item>
+        <item>生气掐腰</item>
+        <item>小动作_考虑</item>
+        <item>单手演奏</item>
+        <item>啊！白云_右（动作大）</item>
+        <item>太极（小动作）</item>
+        <item>左手捶胸保证</item>
+        <item>右手捶胸保证</item>
+        <item>啊！白云_左（动作大）</item>
+        <item>蛇行手臂（舞蹈动作）</item>
+        <item>双手打招呼</item>
+        <item>向左欢迎+优雅解释左+Why手势</item>
+        <item>向右欢迎+优雅解释右+小动作</item>
+        <item>运动右+运动左+连续运动</item>
+        <item>双手奏乐+可爱</item>
+        <item>握手+优雅解释右</item>
+        <item>打招呼+握手+拥抱</item>
+        <item>看书+小动作考虑+优雅解释右</item>
+        <item>拥抱+起飞+掐腰</item>
+        <item>优雅解释左+考虑一下+优雅解释右</item>
+        <item>单手奏乐+看书+啊！白云</item>
+        <item>太极+啊白云</item>
+        <item>保证左+优雅打招呼右</item>
+        <item>保证右+优雅打招呼左</item>
+        <item>再见</item>
+        <item>左转一圈</item>
+        <item>右转一圈</item>
+        <item>右手单手演奏</item>
+        <item>左手自我介绍</item>
+        <item>右手自我介绍</item>
+        <item>向左看</item>
+        <item>向右看</item>
+        <item>随机长动作</item>
+    </string-array>
+
+    <string-array name="action_order">
+        <item>A50C8001AA</item>
+        <item>A50C8002AA</item>
+        <item>A50C8003AA</item>
+        <item>A50C8004AA</item>
+        <item>A50C8005AA</item>
+        <item>A50C8006AA</item>
+        <item>A50C8007AA</item>
+        <item>A50C8008AA</item>
+        <item>A50C8009AA</item>
+        <item>A50C800AAA</item>
+        <item>A50C800BAA</item>
+        <item>A50C800CAA</item>
+        <item>A50C800DAA</item>
+        <item>A50C800EAA</item>
+        <item>A50C800FAA</item>
+        <item>A50C8010AA</item>
+        <item>A50C8011AA</item>
+        <item>A50C8012AA</item>
+        <item>A50C8013AA</item>
+        <item>A50C8014AA</item>
+        <item>A50C8015AA</item>
+        <item>A50C8016AA</item>
+        <item>A50C8017AA</item>
+        <item>A50C8018AA</item>
+        <item>A50C8019AA</item>
+        <item>A50C8021AA</item>
+        <item>A50C8022AA</item>
+        <item>A50C8023AA</item>
+        <item>A50C8024AA</item>
+        <item>A50C8025AA</item>
+        <item>A50C8026AA</item>
+        <item>A50C8027AA</item>
+        <item>A50C8028AA</item>
+        <item>A50C8029AA</item>
+        <item>A50C802AAA</item>
+        <item>A50C802BAA</item>
+        <item>A50C802CAA</item>
+        <item>A50C802DAA</item>
+        <item>A50C800CAA</item>
+        <item>A5238001AA</item>
+        <item>A5238002AA</item>
+        <item>A50C801AAA</item>
+        <item>A50C801BAA</item>
+        <item>A50C801CAA</item>
+        <item>A50C801DAA</item>
+        <item>A50C801EAA</item>
+        <item>A50C8020AA</item>
+    </string-array>
+
+    <string-array name="expression">
+        <item>微笑</item>
+        <item>萌</item>
+        <item>下看</item>
+        <item>右看</item>
+        <item>左看</item>
+        <item>滑稽</item>
+        <item>大哭</item>
+        <item>心</item>
+        <item>疑惑</item>
+        <item>委屈</item>
+        <item>呆</item>
+    </string-array>
+
+    <string-array name="expression_data">
+        <item>A5028001AA</item>
+        <item>A5028002AA</item>
+        <item>A5028003AA</item>
+        <item>A5028004AA</item>
+        <item>A5028005AA</item>
+        <item>A5028006AA</item>
+        <item>A5028007AA</item>
+        <item>A5028008AA</item>
+        <item>A5028009AA</item>
+        <item>A502800AAA</item>
+        <item>A502800BAA</item>
+    </string-array>
+
+    <string-array name="navigation">
+        <item>去first</item>
+        <item>去second</item>
+        <item>去third</item>
+        <item>去fourth</item>
+        <item>去fifth</item>
+        <item>去sixth</item>
+        <item>去seventh</item>
+        <item>去eighth</item>
+        <item>去ninth</item>
+        <item>去tenth</item>
+        <item>去eleventh</item>
+        <item>去twentieth</item>
+        <item>去thirteenth</item>
+        <item>去fourteenth</item>
+        <item>去fifteenth</item>
+    </string-array>
+
+    <string-array name="navigation_data">
+        <item>first</item>
+        <item>second</item>
+        <item>third</item>
+        <item>forth</item>
+        <item>fifth</item>
+        <item>sixth</item>
+        <item>seventh</item>
+        <item>eighth</item>
+        <item>ninth</item>
+        <item>tenth</item>
+        <item>eleventh</item>
+        <item>twentieth</item>
+        <item>thirteenth</item>
+        <item>fourteenth</item>
+        <item>fifteenth</item>
+    </string-array>
+
+    <string-array name="dance">
+        <item>舞蹈1</item>
+        <item>舞蹈2</item>
+    </string-array>
+
+    <string-array name="dance_data">
+        <item>A50C80E1AA</item>
+        <item>A50C80EAAA</item>
+    </string-array>
+
+    <string-array name="dance_music_data">
+        <item>dance.mp3</item>
+        <item>dance2.mp3</item>
+    </string-array>
+
+</resources>

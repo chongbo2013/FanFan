@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_key_mobile_network_play">mobile_network_play</string>
+    <string name="setting_key_mobile_network_download">mobile_network_download</string>
+    <string name="setting_key_sound_effect">sound_effect</string>
+    <string name="setting_key_filter_size">filter_size</string>
+    <string name="setting_key_filter_time">filter_time</string>
+
+    <string-array name="line_talker">
+        <item>xiaoyan</item>
+        <item>xiaoyu</item>
+        <item>catherine</item>
+        <item>henry</item>
+        <item>vimary</item>
+        <item>vixy</item>
+        <item>xiaoqi</item>
+        <item>vixf</item>
+        <item>xiaomei</item>
+        <item>vixl</item>
+        <item>xiaolin</item>
+        <item>xiaorong</item>
+        <item>vixyun</item>
+        <item>xiaoqian</item>
+        <item>xiaokun</item>
+        <item>xiaoqiang</item>
+        <item>vixying</item>
+        <item>xiaoxin</item>
+        <item>nannan</item>
+        <item>vils</item>
+        <item>Mariane</item>
+        <item>Allabent</item>
+        <item>Gabriela</item>
+        <item>Abha</item>
+        <item>XiaoYun</item>
+    </string-array>
+
+    <string-array name="line_talker_show">
+        <item>小燕-青年女声-中英文(普通话）</item>
+        <item>青年-男声-中英文（普通话）</item>
+        <item>凯瑟琳-青年女声-英文</item>
+        <item>亨利-青年男声-英文</item>
+        <item>玛丽-青年女声-英文</item>
+        <item>小研-青年女声-中英文（普通话）</item>
+        <item>小琪-青年女声-中英文（普通话）</item>
+        <item>小峰-青年男声-中英文（普通话）</item>
+        <item>小梅-青年女声-中英文（粤语）</item>
+        <item>小莉-青年女声-中英文（台湾普通话）</item>
+        <item>晓琳-青年女声-中英文（台湾普通话）</item>
+        <item>小蓉-青年女声-汉语（四川话）</item>
+        <item>小芸-青年女声-汉语（东北话）</item>
+        <item>小倩-青年女声-汉语（东北话）</item>
+        <item>小坤-青年男声-汉语（河南话）</item>
+        <item>小强-青年男声-汉语（湖南话）</item>
+        <item>小莹-青年女声-汉语（陕西话）</item>
+        <item>小新-童年男声-汉语（普通话）</item>
+        <item>楠楠-童年女声-汉语（普通话）</item>
+        <item>老孙-老年男声-汉语（普通话）</item>
+        <item>Mariane-法语</item>
+        <item>Allabent-俄语</item>
+        <item>Gabriela-西班牙语</item>
+        <item>Abha-印地语</item>
+        <item>XiaoYun-越南语</item>
+    </string-array>
+
+    <string-array name="local_talker">
+        <item>xiaoyan</item>
+        <item>xiaofeng</item>
+    </string-array>
+
+    <string-array name="local_talker_show">
+        <item>小燕-青年女声</item>
+        <item>小峰-青年男声</item>
+    </string-array>
+
+
+    <string-array name="local_hear">
+        <item>xiaoyan</item>
+        <item>xiaofeng</item>
+    </string-array>
+
+
+    <string-array name="line_iat_language">
+        <item>mandarin</item>
+        <item>en_us</item>
+    </string-array>
+
+    <string-array name="line_iat_language_show">
+        <item>中文</item>
+        <item>英文</item>
+    </string-array>
+
+    <string-array name="line_tts_language_show">
+        <item>中文</item>
+        <item>英文</item>
+    </string-array>
+
+</resources>

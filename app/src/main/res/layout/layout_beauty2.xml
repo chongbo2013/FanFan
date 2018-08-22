@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/beauty_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/y10"
+        android:text="欢迎您"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x12" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <com.fanfan.robot.view.CircleImageView
+            android:id="@+id/ic_head"
+            android:layout_width="@dimen/y120"
+            android:layout_height="@dimen/y120"
+            android:layout_centerInParent="true"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="5dp" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/y70"
+            android:layout_height="@dimen/y60"
+            android:layout_below="@+id/ic_head"
+            android:layout_marginLeft="-200px"
+            android:layout_marginTop="-200px"
+            android:layout_toRightOf="@+id/ic_head"
+            android:background="@mipmap/ic_badge">
+
+            <TextView
+                android:id="@+id/tv_beauty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="95"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_beauty"
+                android:gravity="center"
+                android:text="颜 值"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x8" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_face"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/y10"
+        android:text="详情"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x10" />
+
+</LinearLayout>

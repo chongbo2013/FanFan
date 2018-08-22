@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/contact_search_box_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/contact_search_box_edittext_keyword_background"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawablePadding="8dp"
+        android:ellipsize="none"
+        android:hint="@string/biz_plugin_weather_search_city_hint"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="30dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textColorHint="#ffcccccc"
+        android:textSize="15sp" />
+
+    <ImageButton
+        android:id="@+id/ib_clear_text"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@id/search_edit"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_cross"
+        android:visibility="invisible" />
+
+</RelativeLayout>

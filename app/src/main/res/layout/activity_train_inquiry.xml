@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_air_qurey_back"
+    tools:context=".ui.auxiliary.TrainInquiryActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/video_simple"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_train_inquiry"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_liechetitle"
+        android:layout_width="match_parent"
+        android:layout_height="280px"
+        android:background="@color/dodgerblue"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:background="@color/dodgerblue"
+            android:orientation="horizontal"
+            android:paddingLeft="30px">
+
+            <LinearLayout
+                android:layout_width="480px"
+                android:layout_height="80px"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10px">
+
+                <TextView
+                    android:id="@+id/tv_selectNum"
+                    android:layout_width="0dp"
+                    android:layout_height="61px"
+                    android:layout_weight="1"
+                    android:background="@color/dodgerblue"
+                    android:gravity="center"
+                    android:text="@string/string_nav_select_num"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_selectAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="61px"
+                    android:layout_marginLeft="45px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/string_nav_select_add"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_inputNum"
+                android:layout_width="480px"
+                android:layout_height="80px"
+                android:layout_marginLeft="40px"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10px"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/et_selectNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/string_nav_select_add_hint"
+                    android:textColorHint="@color/dodgerblue"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_selectAddress"
+                android:layout_width="480px"
+                android:layout_height="80px"
+                android:layout_marginLeft="40px"
+                android:background="@color/dodgerblue"
+                android:orientation="horizontal"
+                android:padding="10px"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_selectLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_selectLeft"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/string_air_start"
+                        android:text="北京"
+                        android:textColorHint="@color/color_nav_select_one"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_changeAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5px"
+                    android:src="@mipmap/ic_change" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_selectRight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_selectRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/string_air_end"
+                        android:text="长春"
+                        android:textColorHint="@color/color_nav_select_one"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="40px"
+            android:background="@color/dodgerblue"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="480px"
+                android:layout_height="80px"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/string_out_time" />
+
+                <LinearLayout
+                    android:id="@+id/ll_selectTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_selectTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_select_time" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_nav_down" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="480px"
+                android:layout_height="80px"
+                android:layout_marginLeft="45px"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="3px">
+
+                <TextView
+                    android:id="@+id/tv_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/dodgerblue"
+                    android:gravity="center"
+                    android:text="@string/string_select"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_liechedata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_liechetitle"
+        android:padding="10px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="列车信息"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="始发站"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="终点站"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="发车时间"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="到达时间"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="剩余票数"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="运行时长"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="状态"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_liechedata">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_air"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

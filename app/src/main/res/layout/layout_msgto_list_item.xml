@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/y6">
+
+    <TextView
+        android:id="@+id/to_chat_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x6"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/my_user_icon"
+        android:layout_width="@dimen/y15"
+        android:layout_height="@dimen/y15"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/to_chat_time" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/to_chat_time"
+        android:layout_toLeftOf="@+id/my_user_icon"
+        android:layout_marginLeft="@dimen/y20"
+        android:orientation="horizontal">
+
+        <com.fanfan.robot.view.ChatTextView
+            android:id="@+id/to_chat_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chatto_bg_focused"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x8" />
+    </LinearLayout>
+
+</RelativeLayout>

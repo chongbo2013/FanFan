@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.map.AMapActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orangered"
+        app:navigationIcon="@mipmap/ic_back_black"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_amap"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/black" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/toolbar"
+        android:background="#dfdfdf" />
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/routemap_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/title_background">
+
+        <LinearLayout
+            android:id="@+id/routemap_choose"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y20"
+            android:background="@drawable/title_background"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onDriveClick">
+
+                <ImageView
+                    android:id="@+id/route_drive"
+                    android:layout_width="@dimen/y10"
+                    android:layout_height="@dimen/y10"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/route_drive_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onBusClick">
+
+                <ImageView
+                    android:id="@+id/route_bus"
+                    android:layout_width="@dimen/y10"
+                    android:layout_height="@dimen/y10"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/route_bus_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onWalkClick">
+
+                <ImageView
+                    android:id="@+id/route_walk"
+                    android:layout_width="@dimen/y10"
+                    android:layout_height="@dimen/y10"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/route_walk_normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onCrosstownBusClick">
+
+                <TextView
+                    android:id="@+id/route_CrosstownBus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/y10"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:text="导航"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/x10" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom_bar"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/y5"
+        android:paddingRight="@dimen/y5"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/firstline"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y15"
+            android:layout_marginLeft="@dimen/y5"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="@dimen/x8" />
+
+        <TextView
+            android:id="@+id/secondline"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y15"
+            android:layout_below="@+id/firstline"
+            android:layout_marginLeft="@dimen/y5"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="#999999"
+            android:textSize="@dimen/x6"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y30"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/y10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="详情"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/x8" />
+
+            <Button
+                android:layout_width="7dp"
+                android:layout_height="@dimen/y7"
+                android:layout_marginLeft="@dimen/y7"
+                android:background="@drawable/arrow_right_blue"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bus_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/routemap_header"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bus_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_introduction"
+    tools:context=".ui.video.VideoIntroductionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/video_introduction_bar"
+        app:navigationIcon="@mipmap/ic_back_black"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_video_introduction"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/black" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/simple_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_list_hd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/list_hidden_display" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_video"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y80"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/iv_list_hd"
+                android:layout_marginLeft="@dimen/y100" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_vertial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/simple_list">
+
+            <ImageView
+                android:id="@+id/iv_upward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/upward" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/iv_down"
+                android:layout_below="@+id/iv_upward"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/y20" />
+
+
+            <ImageView
+                android:id="@+id/iv_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:src="@mipmap/down" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="暂无本地视频，请到设置中添加"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</RelativeLayout>

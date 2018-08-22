@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_introduction"
+    tools:context=".ui.setting.act.video.AddVideoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/video_introduction_bar"
+        app:navigationIcon="@mipmap/ic_back_black"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_video_add"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/black" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/y20"
+        android:divider="@color/black"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_video_shart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入视频名称:"
+                android:inputType="textPhonetic"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@drawable/edit_cursor_color"
+                android:textSize="@dimen/x9" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y4"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_video"
+                android:layout_width="@dimen/y75"
+                android:layout_height="@dimen/y45"
+                android:background="@mipmap/choose_long_btn"
+                android:gravity="center"
+                android:text="@string/set_video"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x10" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_marginTop="@dimen/y15"
+            android:visibility="gone"
+            android:id="@+id/img_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+
+</RelativeLayout>

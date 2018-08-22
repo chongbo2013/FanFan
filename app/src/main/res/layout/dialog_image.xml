@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.fanfan.robot.view.PinchImageView
+        android:id="@+id/pinch_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.fanfan.robot.view.subscaleview.SubsamplingScaleImageView
+        android:id="@+id/subsampling_scale_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y25"
+        android:background="@android:color/black"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/y25"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/y5"
+            android:padding="@dimen/y5"
+            android:src="@mipmap/ic_close" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_name"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x10" />
+
+    </RelativeLayout>
+
+    <com.fanfan.robot.view.MyScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#000000"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:padding="@dimen/x5"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x8" />
+
+    </com.fanfan.robot.view.MyScrollView>
+
+</RelativeLayout>

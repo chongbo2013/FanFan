@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.face.act.FaceRegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/camera_bottom">
+
+        <SurfaceView
+            android:id="@+id/camera_surfaceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <com.fanfan.robot.view.camera.DetectionFaceView
+            android:id="@+id/detection_face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.fanfan.robot.view.camera.DetectOpenFaceView
+            android:id="@+id/opencv_face_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/camera_toolbar"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_face_extraction"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/camera_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cemera_bottom_register">
+
+
+        <RelativeLayout
+            android:id="@+id/tip_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/rl_add_face"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y10"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y7"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/y3"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="注册人脸个数:"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x10" />
+
+                    <TextView
+                        android:id="@+id/tv_face_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/y3"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x10" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/y3"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="点击添加职位"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x10" />
+
+                <TextView
+                    android:id="@+id/tv_synopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/y3"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="点击添加介绍"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x10" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_add_face"
+                android:layout_width="@dimen/y100"
+                android:layout_height="@dimen/y100"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/y3"
+                    android:gravity="center"
+                    android:text="添加越多识别越准确"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x10" />
+
+                <ImageView
+                    android:id="@+id/iv_add_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/face_add" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

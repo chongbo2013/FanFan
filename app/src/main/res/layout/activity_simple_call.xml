@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tool:context=".ui.call.SimpleCallActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tencent.ilivesdk.view.AVRootView
+            android:id="@+id/av_root_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/call_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="来电"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+
+        </RelativeLayout>
+
+        <com.fanfan.robot.view.glowpadview.GlowPadView
+            android:id="@+id/glow_pad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="0dp"
+            android:focusable="true"
+            android:gravity="center"
+            app:directionDescriptions="@array/snooze_dismiss_direction_descriptions"
+            app:feedbackCount="1"
+            app:glowRadius="@dimen/y25"
+            app:handleDrawable="@drawable/ic_in_call_touch_handle"
+            app:innerRadius="@dimen/y3"
+            app:outerRadius="@dimen/y45"
+            app:outerRingDrawable="@drawable/ic_lockscreen_outerring"
+            app:pointDrawable="@mipmap/ic_lockscreen_glowdot"
+            app:snapMargin="@dimen/y15"
+            app:targetDescriptions="@array/snooze_dismiss_descriptions"
+            app:targetDrawables="@array/snooze_dismiss_drawables"
+            app:vibrationDuration="20" />
+
+        <ImageView
+            android:id="@+id/btn_hang_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/y19"
+            android:background="@mipmap/ic_hang_up"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

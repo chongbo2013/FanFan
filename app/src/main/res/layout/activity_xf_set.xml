@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/note_bg"
+    tools:context=".ui.setting.act.other.XFSetActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/note_bar"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_xf_set"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/y20"
+        android:divider="@color/black"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:visibility="visible">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/y8"
+            android:text="在线问答设置"
+            android:textSize="@dimen/x8"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/line_hear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/y8"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线监听语言"
+                android:textSize="@dimen/x8" />
+
+            <TextView
+                android:id="@+id/tv_line_hear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/x8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_translate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/y8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中英文切换"
+                android:textSize="@dimen/x8" />
+
+            <TextView
+                android:id="@+id/tv_translate_hear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/x8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_talker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y5"
+            android:background="@color/white"
+            android:padding="@dimen/y8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线发言人"
+                android:textSize="@dimen/x8" />
+
+            <TextView
+                android:id="@+id/tv_line_talker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/x8" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/y8"
+            android:text="离线问答设置"
+            android:textSize="@dimen/x8"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/local_talker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/y8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="离线发言人"
+                android:textSize="@dimen/x8" />
+
+            <TextView
+                android:id="@+id/tv_local_talker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/x8" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/y8"
+            android:text="其他设置"
+            android:textSize="@dimen/x8"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/line_speed_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y5"
+            android:background="@color/white"
+            android:padding="@dimen/y8">
+
+            <TextView
+                android:id="@+id/tv_line_speed_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="语速"
+                android:textSize="@dimen/x8" />
+
+            <SeekBar
+                android:id="@+id/line_speed_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/y15"
+                android:layout_marginRight="@dimen/y15"
+                android:layout_toLeftOf="@+id/tv_line_speed"
+                android:layout_toRightOf="@+id/tv_line_speed_tip"
+                android:max="100"
+                android:min="0"
+                android:progress="60"
+                android:progressDrawable="@drawable/set_progress_bar_style" />
+
+            <TextView
+                android:id="@+id/tv_line_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="60"
+                android:textSize="@dimen/x8" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_volume_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y5"
+            android:background="@color/white"
+            android:padding="@dimen/y8">
+
+            <TextView
+                android:id="@+id/tv_line_volume_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音量"
+                android:textSize="@dimen/x8" />
+
+            <SeekBar
+                android:id="@+id/line_volume_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/y15"
+                android:layout_marginRight="@dimen/y15"
+                android:layout_toLeftOf="@+id/tv_line_volume"
+                android:layout_toRightOf="@+id/tv_line_volume_tip"
+                android:max="100"
+                android:min="0"
+                android:progress="60"
+                android:progressDrawable="@drawable/set_progress_bar_style" />
+
+            <TextView
+                android:id="@+id/tv_line_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="100"
+                android:textSize="@dimen/x8" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

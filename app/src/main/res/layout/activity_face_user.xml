@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@mipmap/ic_back_black"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_user_face_info"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/black" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_id_tv"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/user_info_tv"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/group_id_tv"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/feature_tv"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/face_iv"
+            android:layout_width="250dip"
+            android:layout_height="250dip"
+            android:layout_margin="10dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

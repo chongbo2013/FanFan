@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y60"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/v_playing"
+        android:layout_width="@dimen/y3"
+        android:layout_height="@dimen/y40"
+        android:layout_marginRight="@dimen/y3"
+        android:background="@color/red"
+        android:contentDescription="@null"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="@dimen/y40"
+        android:layout_height="@dimen/y40"
+        android:layout_marginLeft="@dimen/y10"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_cover" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:layout_marginLeft="@dimen/y10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="歌曲"
+                    android:textSize="@dimen/x9" />
+
+                <TextView
+                    android:id="@+id/tv_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="歌手 - 专辑"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/x7" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="@dimen/y40"
+                android:layout_height="match_parent"
+                android:background="@drawable/music_list_more_bg_selector"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_music_list_icon_more" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,172 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    dexOptions {
+        jumboMode true
+//        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a'
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            zipAlignEnabled true
+//            debuggable true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    greendao {
+        //版本号，升级时可配置
+        schemaVersion 2
+        daoPackage 'com.fanfan.robot.db'  //设置DaoMaster、DaoSession、Dao包名
+        targetGenDir 'src/main/java' //设置DaoMaster、DaoSession、Dao目录
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'LICENSE'
+        exclude 'LICENSE.txt'
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    google()
+}
+
+dependencies {
+    implementation files('libs/Msc.jar')
+    implementation files('libs/AIUI.jar')
+    implementation files('libs/HSOTG2.0.jar')
+    implementation files('libs/poi-3.15.jar')
+    implementation files('libs/poi-scratchpad-3.15.jar')
+    implementation files('libs/hanlp-portable-1.6.2.jar')
+
+//    implementation files('libs/baidu_license.jar')
+//    implementation files('libs/FaceSDK.jar')
+//    implementation files('libs/liantian_3-1-6-1-286_0614.jar')
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':print')
+    implementation project(':lib_zxing')
+    implementation project(':library')
+    implementation project(':orbbec')
+
+    testImplementation 'junit:junit:4.12'
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["callsdk"]
+    implementation rootProject.ext.dependencies["ilivesdk"]
+    implementation rootProject.ext.dependencies["livesdk"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["recyclerview"]
+    implementation rootProject.ext.dependencies["cardview"]
+    implementation rootProject.ext.dependencies["customtabs"]
+    implementation rootProject.ext.dependencies["support-annotations"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+
+    androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espresso-core"]
+
+    debugImplementation rootProject.ext.dependencies["leakcanary"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-no-op"]
+    testImplementation rootProject.ext.dependencies["leakcanary-no-op"]
+
+    implementation rootProject.ext.dependencies["stetho"]
+    implementation rootProject.ext.dependencies["stetho-okhttp3"]
+
+    implementation rootProject.ext.dependencies["greendao"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    implementation rootProject.ext.dependencies["retrofit2"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+
+    implementation rootProject.ext.dependencies["BaseAdapterHelper"]
+
+    implementation rootProject.ext.dependencies["material-core"]
+    implementation rootProject.ext.dependencies["material-commons"]
+
+    implementation rootProject.ext.dependencies["rollviewpager"]
+    implementation rootProject.ext.dependencies["ultra-ptr"]
+    implementation rootProject.ext.dependencies["kenburnsview"]
+    implementation rootProject.ext.dependencies["materialtabstrip"]
+    implementation rootProject.ext.dependencies["swipebacklayout"]
+    implementation rootProject.ext.dependencies["flowlayout"]
+    implementation rootProject.ext.dependencies["viewanimator"]
+    implementation rootProject.ext.dependencies["nineoldandroids"]
+
+    implementation rootProject.ext.dependencies["gms"]
+
+    implementation rootProject.ext.dependencies["3dmap"]
+    implementation rootProject.ext.dependencies["location"]
+    implementation rootProject.ext.dependencies["search"]
+
+    implementation rootProject.ext.dependencies["panowidget"]
+
+    implementation rootProject.ext.dependencies["dagger"]
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+
+    implementation rootProject.ext.dependencies["exoplayer"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+}

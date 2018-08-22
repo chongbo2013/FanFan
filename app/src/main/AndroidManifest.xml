@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fanfan.robot">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.MODIFY_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 悬浮窗口权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 关闭应用程序的权限 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 屏保 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+     
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".app.NovelApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:replace="android:icon">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="b11de4341cd0acd1cb134240436a4d1a" />
+        <meta-data
+            android:name="com.fanfan.robot.app.common.glide.BaseGlideModule"
+            android:value="GlideModule" />
+
+        <activity
+            android:name=".ui.land.SplashActivity"
+            android:theme="@style/splashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fanfan.novel.utils.permiss.PermissionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme_Dialog" />
+        <activity
+            android:name=".ui.auxiliary.SelectCtiyActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.map.AMapActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.auxiliary.LockActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <activity
+            android:name=".app.common.act.CrashActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.land.LoginActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.land.RegisterActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.land.ForgetActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.call.SimpleCallActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.video.VideoDetailActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.voice.ProblemConsultingActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.video.VideoIntroductionActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.media.MultimediaActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.site.PublicNumberActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.FaceRecognitionActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.naviga.NavigationActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.video.DataVideoActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.video.AddVideoActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.voice.DataVoiceActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.voice.AddVoiceActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.naviga.DataNavigationActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.naviga.AddNavigationActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.site.DataSiteActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.site.AddSiteActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.FaceDataActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.ModifyActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.PersonInfoDetailActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.act.InstagramPhotoActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.act.FaceRegisterActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.act.FaceCheckinActivity"
+            android:theme="@style/AppThemeAction" />
+
+        <activity
+            android:name=".ui.face.act.DetectfaceActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.act.sign.SignAllActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.act.AuthenticationActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.dance.DanceAddActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.media.act.DanceActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.naviga.ExhibitionActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.auxiliary.FanFanIntroduceActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.auxiliary.PPTActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.map.act.DriveRouteDetailActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.map.act.WalkRouteDetailActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.map.act.BusRouteDetailActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.auxiliary.PanoramicMapActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.video.recoder.CameraRecoderActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.setting.act.other.SettingPwdActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.voice.ImportActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.setting.act.voice.FileImportActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.setting.act.other.GreetingActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.other.XFSetActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.aip.AddGroupActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.UserGroupManagerActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.GroupListActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.UserListActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.UserActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.AddGroupActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.RegActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.LivenessSettingActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.RgbDetectActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.setting.act.face.local.RgbVideoIdentityActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".ui.face.act.FaceRegister2Activity"
+            android:theme="@style/AppThemeAction" />
+        <activity android:name=".ui.face.act.FaceCheckin2Activity"
+            android:theme="@style/AppThemeAction" />
+
+        <service android:name=".service.SpeakService" />
+        <service android:name=".service.UdpService" />
+        <service android:name=".service.SerialService" />
+        <service android:name=".service.PlayService" />
+        <service android:name=".service.CameraSerivice" />
+        <service android:name=".service.ScreenService" />
+        <service android:name=".service.CallSerivice" />
+        <service android:name=".service.LoadFileService" />
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- 身份证识别 -->
+        <service
+            android:name="com.huashi.otg.sdk.HsOtgService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- 消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+
+        <!-- 消息收发辅助service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+
+        <!-- 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 开机广播 -->
+        <receiver android:name=".service.receiver.BootBroadcastReceiver">
+            <intent-filter>
+
+                <!-- 注册开机广播地址 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.fanfan.robot.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

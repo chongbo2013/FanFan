@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.land.ForgetActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_forget"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp">
+
+            <View
+                android:id="@+id/span1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/span2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:visibility="invisible" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/usernameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@null"
+                    android:hint="用户名"
+                    android:inputType="textEmailAddress|text"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/username"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/horizontal_line" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/passwordWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@null"
+                    android:hint="密码"
+                    android:inputType="textPassword"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/password"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/horizontal_line" />
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/span3"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/determine"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_longin_btn"
+                android:text="确  定"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

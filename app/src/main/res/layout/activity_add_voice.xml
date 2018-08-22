@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/problem_consulting"
+    tools:context=".ui.setting.act.voice.AddVoiceActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/problem_consulting_bar"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_voice_add"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/voice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/y20"
+        android:divider="@color/black"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/et_question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入问题:"
+                android:inputType="textPhonetic"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@drawable/edit_cursor_color"
+                android:textSize="@dimen/x8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="输入答案:"
+                android:inputType="textPhonetic"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@drawable/edit_cursor_color"
+                android:textSize="@dimen/x8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/set_expression"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x8" />
+
+            <TextView
+                android:id="@+id/tv_expression"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50px"
+                android:layout_weight="1"
+                android:hint="点击选择表情"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/x8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y30"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/set_action"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x8" />
+
+            <TextView
+                android:id="@+id/tv_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50px"
+                android:layout_weight="1"
+                android:hint="点击选择动作"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/x8" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_img"
+                android:layout_width="@dimen/y75"
+                android:layout_height="@dimen/y45"
+                android:background="@mipmap/choose_long_btn"
+                android:gravity="center"
+                android:text="@string/set_img"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x10" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/y7"
+        android:visibility="gone"
+        android:layout_below="@+id/voice_layout"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/y4"
+        app:contentPadding="@dimen/y7">
+
+        <ImageView
+            android:id="@+id/img_voice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

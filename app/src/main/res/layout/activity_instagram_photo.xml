@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backdrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.face.act.InstagramPhotoActivity">
+
+    <SurfaceView
+        android:id="@+id/camera_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/camera_bottom"
+        android:visibility="visible" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.MyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/camera_toolbar"
+        app:navigationIcon="@mipmap/ic_back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/title_instagram_photo"
+            android:textAppearance="@style/Toolbar.TitleText"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/camera_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:layout_alignParentBottom="true"
+        android:background="@color/camera_bottom_take">
+
+
+        <RelativeLayout
+            android:id="@+id/time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/y3"
+                android:gravity="center"
+                android:text="默认3秒后自动拍照"
+                android:textColor="#7F868E"
+                android:textSize="@dimen/x7" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/y70"
+                android:layout_height="@dimen/y70"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/ic_takephoto_circle_big">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/ic_takephoto_circle_small">
+
+                    <TextView
+                        android:id="@+id/tv_countTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x8" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/take_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/y5"
+                android:gravity="center"
+                android:text="点击再次拍照"
+                android:textColor="#7F868E"
+                android:textSize="@dimen/x7" />
+
+            <ImageView
+                android:id="@+id/iv_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/take_photo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/choose_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_takephotp"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x8" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_takephotp"
+                    android:gravity="center"
+                    android:text="分享"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x8" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/share_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_or_code">
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_takephotp"
+                    android:gravity="center"
+                    android:text="继续"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x8" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_next"
+                    android:layout_marginTop="@dimen/y15"
+                    android:gravity="center"
+                    android:text="扫描二维码获取照片"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x8" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_or_code"
+                android:layout_width="@dimen/y90"
+                android:layout_height="@dimen/y90"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/y40" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

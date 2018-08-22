@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">FANFAN</string>
+
+    <string name="app_id">5a27877d</string>
+    <string name="app_youdao_id">4dc7ab44c14b8014</string>
+
+    <string name="welcome">您好，很高兴为您服务，请问有什么可以帮您?</string>
+
+    <string name="tips_not_wifi">You are currently using the mobile network, the player will continue to consume traffic</string>
+    <string name="tips_not_wifi_confirm">Resume</string>
+    <string name="tips_not_wifi_cancel">Stop play</string>
+    <string name="no_url">No mUrl</string>
+
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="title_setting_pwd">请输入密码</string>
+    <string name="input_hint_pwd">请输入密码</string>
+
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="quit">退出</string>
+
+    <string name="tip_close_camera">关闭摄像头</string>
+    <string name="tip_open_camera">打开摄像头</string>
+    <string name="tip_switch_camera">切换摄像头</string>
+    <string name="tip_close_mic">关闭麦克风</string>
+    <string name="tip_open_mic">打开麦克风</string>
+    <string name="tip_set_speaker">切换到扬声器</string>
+    <string name="tip_set_headset">切换到听筒</string>
+    <string name="tip_set_beauty">设置美颜</string>
+    <string name="invite">邀请</string>
+    <string name="log">日志</string>
+    <string name="invite_tip">输入邀请用户id</string>
+    <string name="tip_end_call">挂断</string>
+
+    <string name="set_type">类型</string>
+    <string name="set_action">执行动作</string>
+    <string name="set_expression">面部表情</string>
+    <string name="set_datatype">类型</string>
+    <string name="set_img">  添加图片  </string>
+    <string name="set_video">  添加视频  </string>
+    <string name="set_voice">  添加语音  </string>
+    <string name="set_site">  添加网址  </string>
+
+    <string name="title_login">登 陆</string>
+    <string name="title_register">注 册</string>
+    <string name="title_forget">密 码 修 改</string>
+    <string name="title_video_introduction">视 频 介 绍</string>
+    <string name="title_problem_consulting">问 题 咨 询</string>
+    <string name="title_multi_media">多 媒 体</string>
+    <string name="title_set_up">设 置</string>
+    <string name="title_public_number">公 众 号</string>
+    <string name="title_navigation">导 航</string>
+    <string name="title_face_recognition">人 脸 识 别</string>
+    <string name="title_video_detail">视 频 详 情</string>
+    <string name="title_video_set">视 频 设 置</string>
+    <string name="title_video_add">视 频 添 加</string>
+    <string name="title_voice_set">语 音 设 置</string>
+    <string name="title_voice_add">语 音 添 加</string>
+    <string name="title_navigation_set">导 航 设 置</string>
+    <string name="title_navigation_add">导 航 添 加</string>
+    <string name="title_site_set">网 址 设 置</string>
+    <string name="title_site_add">网 址 添 加</string>
+    <string name="title_face_data">个 体 列 表</string>
+    <string name="title_person_info">个 体 信 息</string>
+    <string name="title_modify">个 体 修 改</string>
+    <string name="title_dance_add">舞 蹈 添 加</string>
+    <string name="title_instagram_photo">拍 照 分 享</string>
+    <string name="title_face_check_in">人 脸 签 到</string>
+    <string name="title_face_witness_contrast">人 证 对 比</string>
+    <string name="title_face_extraction">人 脸 提 取</string>
+    <string name="title_face_detect_face">人 脸 识 别</string>
+    <string name="title_sing_all">所 有 签 到</string>
+    <string name="title_navigation_exhibition">导 航 展 示</string>
+    <string name="title_fanfan_introduce">F A N F A N 介 绍</string>
+    <string name="title_ppt">P P T</string>
+    <string name="title_amap">地 图</string>
+    <string name="title_train_inquiry">列 车 查 询</string>
+    <string name="title_panorama_detail">全 景 地 图</string>
+    <string name="title_amap_detail">驾车路线详情</string>
+    <string name="title_import">一 键 导 入</string>
+    <string name="title_import_file">文 件 导 入</string>
+    <string name="title_greeting_function">打招呼功能设置</string>
+    <string name="title_xf_set">语 音 设 置</string>
+    <string name="title_user_group_manager">用户及组管理</string>
+    <string name="title_user_group">用 户 组</string>
+    <string name="title_user_group_user">用 户 face</string>
+    <string name="title_user_face_info">人 脸 信 息</string>
+    <string name="title_add_group">添 加 分 组</string>
+
+    <string name="open_map">此页面暂不支持打开地图</string>
+    <string name="open_artificial">此页面暂不支持人工客服</string>
+    <string name="open_face">此页面暂不支持人脸识别等功能</string>
+    <string name="open_control">此页面暂不支持上下控制</string>
+    <string name="open_local">此页面暂不支持本地语音控制</string>
+
+    <string name="speakText">找不到视频链接</string>
+
+    <string name="tv_artificial_tip">是否没有解答您的疑惑? 联系人工客服帮忙</string>
+    <string name="input_hint">请输入姓名</string>
+    <string name="input_navigation">输入到达地点后的命令词</string>
+    <string name="input_content">此处所注册的姓名用于人脸签到中.</string>
+    <string name="play_time_start">00:00</string>
+    <string name="input_hint_info">请输入id</string>
+    <string name="input_hint_name">请输入姓名</string>
+
+    <string name="mode_loop">列表循环</string>
+    <string name="mode_shuffle">随机播放</string>
+    <string name="mode_one">单曲循环</string>
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+    <string name="string_out_time">出发时间</string>
+    <string name="string_select_time">选择时间</string>
+    <string name="string_nav_select_num">按列车号</string>
+    <string name="string_nav_select_add">按始发地</string>
+    <string name="string_nav_select_add_hint">请输入列车号</string>
+
+    <string name="string_select">查询</string>
+    <string name="previous">Go to previous</string>
+    <string name="next">Go to next</string>
+    <string name="calendar">Calendar</string>
+    <string name="string_air_start">出发地</string>
+    <string name="string_air_end">目的地</string>
+
+    <string name="biz_plugin_weather_search_city_hint">搜索全国城市(中文/拼音)</string>
+
+    <string name="speak_main">您有什么想了解的可以向我询问，问题咨询中我可以回答您更多问题，导航系统可引导您到达指定位置，还有唱歌、跳舞娱乐功能，欢迎您体验</string>
+
+    <string name="download_fail_retry">下载失败是否重试？</string>
+    <string name="download_check_finish">检测到新版本apk下载完成，是否点击安装</string>
+    <string name="download_finish">下载完成，点击安装</string>
+    <string name="downloading">正在下载中...</string>
+    <string name="pause_downloading">暂停下载</string>
+    <string name="check_new_version">检测到新版本</string>
+    <string name="download_progress">下载进度:%d%%/100%%</string>
+    <string name="download_fail">下载失败，点击重试</string>
+    <string name="progress">%d/100</string>
+    <string name="write_permission_deny">下载安装包需要读写文件权限。</string>
+    <string name="download_apkname">%s.apk</string>
+    <string name="download_backstage">后台下载</string>
+
+    <string name="permission_dialog_title">开启%s</string>
+    <string name="permission_dialog_msg">为了您能正常使用%s，需要以下权限</string>
+    <string name="permission_title">请允许获取%s</string>
+    <string name="permission_denied">我们需要获取%1$s, 否则您将无法正常使用%2$s</string>
+    <string name="permission_denied_with_naac">"由于%1$s无法获取%2$s, 不能正常运行, 请开启权限后再使用。\n\n设置路径: 应用管理->%3$s->权限"</string>
+    <string name="permission_cancel">取消</string>
+    <string name="permission_ensure">确定</string>
+    <string name="permission_reject">拒绝</string>
+    <string name="permission_btn_next">下一步</string>
+    <string name="permission_go_to_setting">去设置</string>
+
+    <string name="tts_toast_format_buffer" formatted="false">缓冲进度为%d%%</string>
+    <string name="tts_toast_format_speak" formatted="false">播放进度为%d%%</string>
+
+    <string name="excel_log">请前往海风智能科技官网下载标准批量EXCEL导入模板，否则将导入失败！将模板放置于SD卡中Donload目录下。</string>
+
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="315"
+        android:startColor="@color/face_recognition_bar1"
+        android:centerColor="@color/face_recognition_bar2"
+        android:endColor="@color/face_recognition_bar3" />
+</shape>

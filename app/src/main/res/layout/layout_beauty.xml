@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/beauty_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/camera_bottom"
+    android:layout_below="@+id/toolbar"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_checkin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ic_beauty_head"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x12" />
+
+    <ImageView
+        android:id="@+id/ic_beauty_head"
+        android:layout_width="@dimen/y200"
+        android:layout_height="@dimen/y200"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/y40" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/y70"
+        android:layout_height="@dimen/y60"
+        android:layout_below="@+id/ic_beauty_head"
+        android:layout_marginLeft="-200px"
+        android:layout_marginTop="-200px"
+        android:layout_toRightOf="@+id/ic_beauty_head"
+        android:background="@mipmap/ic_badge">
+
+        <TextView
+            android:id="@+id/tv_beauty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="95"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x14" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_beauty"
+            android:gravity="center"
+            android:text="颜 值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x8" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_face"
+        android:layout_width="@dimen/y200"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ic_beauty_head"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/y10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x10" />
+
+</RelativeLayout>
