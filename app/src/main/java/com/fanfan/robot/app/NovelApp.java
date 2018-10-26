@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.baidu.aip.db.DBManager;
 import com.baidu.aip.utils.PreferencesUtil;
+import com.fanfan.novel.utils.crash.RCrashHandler;
 import com.fanfan.robot.app.common.Constants;
 import com.fanfan.robot.app.common.base.BaseApplication;
 import com.fanfan.robot.app.common.lifecycle.Foreground;

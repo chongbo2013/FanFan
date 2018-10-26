@@ -148,6 +148,7 @@ public class FaceCheckin2Activity extends BarBaseActivity implements FaceDetectM
         if (identityStatus != FEATURE_DATAS_UNREADY) {
             return;
         }
+
         Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
             public void subscribe(ObservableEmitter<Integer> e) throws Exception {

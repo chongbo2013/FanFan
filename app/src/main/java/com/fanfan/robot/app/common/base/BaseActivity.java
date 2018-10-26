@@ -343,7 +343,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
     }
 
 
-    public static final int BACK_MAIN_DELAY_MILLIS = 50 * 1000;
+    public static final int BACK_MAIN_DELAY_MILLIS = 300 * 1000;
 
     private void removeToMain() {
         if (!whetherNotReturn()) {

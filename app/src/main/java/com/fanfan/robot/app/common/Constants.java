@@ -20,7 +20,8 @@ public class Constants {
     public static int IMSDK_ACCOUNT_TYPE = 17967;
 
     //百度人脸识别唯一id，这个需要第一次联网验证，每个机器人只能用一个
-    public static final String FACE_KEY = "HWQV-HLEQ-NV33-HMWU";
+    public static final String FACE_KEY = "ODK0-UIKT-FCZJ-ZWCL";//三星手机
+//    public static final String FACE_KEY = "DHD5-ZUDC-7BGA-N0HP";//永久的
     //手机控制端的账号
     public static String controlId = "fser02";
     //客服端账号

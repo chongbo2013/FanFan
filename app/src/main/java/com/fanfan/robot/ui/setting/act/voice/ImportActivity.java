@@ -114,7 +114,7 @@ public class ImportActivity extends BarBaseActivity {
             @Override
             public void subscribe(ObservableEmitter<List<VoiceBean>> e) throws Exception {
 
-                List<VoiceBean> voiceBeanList = LoadDataUtils.loadVoiceBean();
+                List<VoiceBean> voiceBeanList = LoadDataUtils.loadVoiceBean(ImportActivity.this);
 
                 e.onNext(voiceBeanList);
 

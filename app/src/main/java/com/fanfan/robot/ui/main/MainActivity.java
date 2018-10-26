@@ -1341,9 +1341,21 @@ public class MainActivity extends BarBaseActivity implements
     @Override
     public void parseServerMsgcomplete(String txt) {
         Print.e("接收到客服发来的消息： " + txt);
-
+        //bcimnopvxyz
         txt = txt.trim();
-        if (txt.equals("a")) {
+        if (txt.equals("b")) {
+            addSpeakAnswer("ServerMsg", "您可以咨询我旁边的工作人员，我是第一次到这儿来，对这个地方还不是很熟悉 ，请您谅解", true, false);
+        } else if (txt.equals("c")) {
+            addSpeakAnswer("ServerMsg", "尊敬的领导，你好，我叫芳芳，是北京海风智能科技自主研发的服务机器人 ，很高兴为您服务", true, false);
+        } else if (txt.equals("i")) {
+            addSpeakAnswer("ServerMsg", "今天多云，昼夜温差大，请适量增减衣物", true, false);
+        } else if (txt.equals("m")) {
+            addSpeakAnswer("ServerMsg", "您可以在我的系统中录入您的信息，下一次见到您，我就认识了", true, false);
+        } else if (txt.equals("n")) {
+            addSpeakAnswer("ServerMsg", "尊敬的用户，您好，如果您有什么问题想要问我，您可以站在80公分以外的安全距离对我进行提问，以防我动的时候会碰到您", true, false);
+        } else if (txt.equals("o")) {
+            addSpeakAnswer("ServerMsg", "您好，请让一让，谢谢您的理解配合", true, false);
+        } else if (txt.equals("a")) {
             mSoundPresenter.stopVoice();
             stopRecognizerListener();
         } else if (txt.equals("s")) {

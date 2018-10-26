@@ -1,7 +1,9 @@
 package com.fanfan.novel.utils.grammer;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 
 import com.fanfan.novel.utils.bitmap.BitmapUtils;
@@ -24,7 +26,9 @@ import com.seabreeze.log.Print;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -185,6 +189,83 @@ public class LoadDataUtils {
         return voiceBeanList;
     }
 
+    public static List<VoiceBean> loadVoiceBean(Context context) {
+
+        List<VoiceBean> voiceBeanList = new ArrayList<>();
+
+        List<String> strings = loadImageFile(context);
+
+        String[] localVoiceQuestion = resArray(R.array.local_voice_question);
+        String[] localVoiceAnswer = resArray(R.array.local_voice_answer);
+
+        String[] action = resArray(R.array.action);
+        String[] actionOrder = resArray(R.array.action_order);
+
+        String[] expression = resArray(R.array.expression);
+        String[] expressionData = resArray(R.array.expression_data);
+
+        Print.e("00000000");
+        Print.e(strings.size());
+        Print.e(localVoiceQuestion.length);
+
+        for (int i = 0; i < localVoiceQuestion.length; i++) {
+            VoiceBean voiceBean = new VoiceBean();
+
+            String showTitle = localVoiceQuestion[i];
+            voiceBean.setSaveTime(System.currentTimeMillis());
+            voiceBean.setShowTitle(showTitle);
+            voiceBean.setVoiceAnswer(localVoiceAnswer[i]);
+
+
+            int actionIndex = new Random().nextInt(action.length);
+            int expressionIndex = new Random().nextInt(expression.length);
+
+            voiceBean.setExpression(expression[expressionIndex]);
+            voiceBean.setExpressionData(expressionData[expressionIndex]);
+            voiceBean.setAction(action[actionIndex]);
+            voiceBean.setActionData(actionOrder[actionIndex]);
+
+
+            if (strings != null && strings.size() > 0) {
+
+                if (strings.contains(showTitle)) {
+                    voiceBean.setImgUrl("file:///android_asset/照片/" + showTitle + "/" + showTitle + ".png");
+                }
+            }
+//            if (imageFiles != null && imageFiles.size() > 0) {
+//                int imageIndex = new Random().nextInt(imageFiles.size());
+//                voiceBean.setImgUrl(imageFiles.get(imageIndex).getAbsolutePath());
+//            }
+
+            List<String> keywordList = HanLP.extractKeyword(localVoiceQuestion[i], 5);
+            if (keywordList != null && keywordList.size() > 0) {
+                Print.i(keywordList);
+
+                if (keywordList.size() == 1) {
+                    voiceBean.setKey1(showTitle);
+                } else {
+                    for (int j = 0; j < keywordList.size(); j++) {
+                        String key = keywordList.get(j);
+                        if (j == 0) {
+                            voiceBean.setKey1(key);
+                        } else if (j == 1) {
+                            voiceBean.setKey2(key);
+                        } else if (j == 2) {
+                            voiceBean.setKey3(key);
+                        } else if (j == 4) {
+                            voiceBean.setKey4(key);
+                        }
+                    }
+                }
+            } else {
+                voiceBean.setKey1(showTitle);
+            }
+
+            voiceBeanList.add(voiceBean);
+        }
+        return voiceBeanList;
+    }
+
     public static List<File> loadImageFile(String dirName) {
 
         List<File> imageFiles = new ArrayList<>();
@@ -205,6 +286,23 @@ public class LoadDataUtils {
             }
         }
         return imageFiles;
+    }
+
+    public static List<String> loadImageFile(Context context) {
+
+        AssetManager assetManager = context.getResources().getAssets();
+
+        String[] files = null;
+        try {
+            files = assetManager.list("照片");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (files == null) {
+            return null;
+        }
+
+        return Arrays.asList(files);
     }
 
     public static List<File> loadVideoFile(String dirName) {
